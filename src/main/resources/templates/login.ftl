@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Login | E-Shopper</title>
-    <link th:href="@{/css/bootstrap.min.css" rel="stylesheet">
-    <link th:href="@{/css/font-awesome.min.css" rel="stylesheet">
-    <link th:href="@{/css/prettyPhoto.css" rel="stylesheet">
-    <link th:href="@{/css/price-range.css" rel="stylesheet">
-    <link th:href="@{/css/animate.css" rel="stylesheet">
-	<link th:href="@{/css/main.css" rel="stylesheet">
-	<link th:href="@{/css/responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -149,9 +149,10 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
+						<form action="" method="POST">
+							<input type="text" name="username" placeholder="User Name" />
+							<input type="password" name="password" placeholder="Password" />
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
